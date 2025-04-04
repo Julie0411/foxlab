@@ -1,12 +1,19 @@
 @font-face {
-    font-family: 'Tinos';
-    src: url('/assets/Tinos/Tinos-Regular.ttf') format('ttf');
+    font-family: 'Open-Sans';
+    src: url('/assets/Open_Sans,Ubuntu/Open_Sans/static/OpenSans-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('/assets/Open_Sans,Ubuntu/Ubuntu/Ubuntu-Bold.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
-    font-family: Tinos, Arial, sans-serif;
+    font-family: "Open-Sans", Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #ededed;
@@ -32,7 +39,7 @@ header h1 {
     font-size: 2rem;
     margin-top: 10px;
     font-weight: bold;
-    font-family: 'Tinos', Arial, sans-serif;
+    font-family: "Ubuntu", Arial, sans-serif;
 }
 
 header img {
@@ -78,6 +85,7 @@ header img {
     justify-content: center;
     gap: 15px;
     padding: 20px;
+    margin-bottom: 50px;
 }
 
 .product {
@@ -89,6 +97,7 @@ header img {
     font-size: 16px;
     padding: 5px;
     overflow: inherit;
+    font-family: "Ubuntu", Arial, sans-serif;
 }
 
 #product-list {
@@ -163,14 +172,80 @@ button:hover {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333333;
-    color: #ededed;
-    margin-top: 20px;
+    background-color: #ededed;
+    color: #333333;
 }
 
-#title {
+.title {
     font-size: 2rem;
-    margin-top: 10px;
-    font-family: 'Tinos', Arial, sans-serif;
     width: 95%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 40px 0 20px 0;
+}
+
+.title h2 {
+    font-family: "Open-Sans", Arial, sans-serif;
+    font-weight: bold;
+    color: #333333;
+    text-align: left;
+    margin: 0;
+}
+
+.mission-section {
+    background-color: #333333;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.mission-section .title h2 {
+    font-size: 2.2rem;
+    color: #ededed;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #ededed;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
+
+.icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 140px;
+}
+
+
+.icon-box img {
+    margin-bottom: 12px;
+}
+
+.icon-box p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ededed;
+    margin: 0;
+    font-family: "Ubuntu", Arial, sans-serif;
+}
+
+.description {
+    font-size: 1.15rem;
+    color: #ededed;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
 }
