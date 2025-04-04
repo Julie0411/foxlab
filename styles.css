@@ -1,0 +1,176 @@
+@font-face {
+    font-family: 'Tinos';
+    src: url('/assets/Tinos/Tinos-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Tinos, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ededed;
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #333333;
+    color: white;
+    position: relative;
+}
+
+#logo {
+    max-width: 260px;
+    height: auto;
+    border-top: 3px solid #333333;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: 'Tinos', Arial, sans-serif;
+}
+
+header img {
+    margin-top: 5px;
+}
+
+.navigator {
+    background-color: #333333;
+    padding: 10px 0;
+}
+
+.navigator nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.navigator nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 20px;
+    padding: 8px 16px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+
+.navigator nav a:hover {
+    background-color: #936037;
+    color: white;
+}
+
+#cart-count {
+    font-weight: bold;
+    padding: 3px 8px;
+    font-size: 14px;
+}
+
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.product {
+    flex: 0 0 auto;
+    width: 250px;
+}
+
+.product h3 {
+    font-size: 16px;
+    padding: 5px;
+    overflow: inherit;
+}
+
+#product-list {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 15px;
+    padding: 20px;
+    scroll-behavior: smooth;
+}
+
+.product img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px;
+    background-color: #936037;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #7D4E24;
+}
+
+.carousel {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ededed;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+.prev {
+    left: 5px;
+}
+
+.next {
+    right: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333333;
+    color: #ededed;
+    margin-top: 20px;
+}
+
+#title {
+    font-size: 2rem;
+    margin-top: 10px;
+    font-family: 'Tinos', Arial, sans-serif;
+    width: 95%;
+}
