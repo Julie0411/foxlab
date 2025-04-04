@@ -195,20 +195,14 @@ footer {
 
 .mission-section {
     background-color: #333333;
-    padding: 60px 20px;
     text-align: center;
-}
-
-.mission-section .title h2 {
-    font-size: 2.2rem;
-    color: #ededed;
-    margin-bottom: 10px;
+    padding: 20px;
 }
 
 .subtitle {
     font-size: 1.25rem;
     color: #ededed;
-    max-width: 700px;
+    max-width: 95%;
     margin: 0 auto 40px auto;
     line-height: 1.6;
 }
@@ -217,7 +211,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     margin-bottom: 40px;
 }
 
@@ -226,9 +220,8 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    width: 140px;
+    width: 200px;
 }
-
 
 .icon-box img {
     margin-bottom: 12px;
@@ -245,7 +238,7 @@ footer {
 .description {
     font-size: 1.15rem;
     color: #ededed;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 95%;
+    margin-bottom: 40px;
     line-height: 1.8;
 }
