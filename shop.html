@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Foxlab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header id="mini-header">
+    <img src="assets/images/FoxlabMark.svg" alt="Foxlab Logo" id="logo-mini">
+    <img src="assets/images/FOXLAB.svg" alt="Foxlab Full Logo" id="logo-full">
+    <h1></h1>
+</header>
+
+<section class="navigator-section">
+    <div class="shop-navigator">
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="#">Cart <span id="cart-count">0</span></a>
+        </nav>
+    </div>
+</section>
+
+<section class="shop-section">
+    <div class="title">
+        <h2 style="color: #333333;">I nostri prodotti</h2>
+    </div>
+    <div class="product-list">
+        <div class="product">
+            <img src="assets/images/tazza_bassotti.png" alt="Tazza con bassotti">
+            <h3 class="productDescription">Tazza con bassotti</h3>
+            <p>CHF 15</p>
+            <button class="add-to-cart">Aggiungi al carrello</button>
+        </div>
+        <div class="product">
+            <img src="assets/images/gioco_gatti.png" alt="Gioco per gatti">
+            <h3 class="productDescription">Gioco per gatti</h3>
+            <p>CHF 20</p>
+            <button class="add-to-cart">Aggiungi al carrello</button>
+        </div>
+        <div class="product">
+            <img src="assets/images/tagliere_cervo.png" alt="Tagliere cervo">
+            <h3 class="productDescription">Tagliere in ardesia con cervo</h3>
+            <p>CHF 30</p>
+            <button class="add-to-cart">Aggiungi al carrello</button>
+        </div>
+        <div class="product">
+            <img src="assets/images/tazza_nome.png" alt="Tazza personalizzata">
+            <h3 class="productDescription">Tazza personalizzabile con nome</h3>
+            <p>CHF 15</p>
+            <button class="add-to-cart">Aggiungi al carrello</button>
+        </div>
+        <div class="product">
+            <div class="carousel">
+                <button class="prev">&lt;</button>
+                <div class="carousel-container">
+                    <img src="assets/images/tagliere_love_bianco.png" alt="Image 1">
+                    <img src="assets/images/tagliere_love_blu.png" alt="Image 2">
+                    <img src="assets/images/tagliere_love_giallo.png" alt="Image 3">
+                </div>
+                <button class="next">&gt;</button>
+            </div>
+            <h3 class="productDescription">Vassoio love personalizzato</h3>
+            <p>CHF 25</p>
+            <button class="add-to-cart" data-product="4" data-name="Product 4" data-price="25.00">Aggiungi al carrello</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Foxlab shop</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
