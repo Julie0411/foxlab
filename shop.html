@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop - Foxlab</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/shop.css">
 </head>
 <body>
 
@@ -14,14 +15,12 @@
     <h1></h1>
 </header>
 
-<section class="navigator-section">
-    <div class="shop-navigator">
-        <nav>
-            <a href="home.html">Home</a>
-            <a href="shop.html">Shop</a>
-            <a href="cart.html">Cart <span id="cart-count">0</span></a>
-        </nav>
-    </div>
+<section class="navigator">
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart <span id="cart-count">0</span></a>
+    </nav>
 </section>
 
 <section class="shop-section">
@@ -30,60 +29,74 @@
     </div>
     <div class="product-list">
         <div class="product">
-            <div class="carousel">
-                <button class="prev">&lt;</button>
-                <div class="carousel-container">
-                    <img src="assets/images/tazza_bassotti.png" alt="Image 1">
-                    <img src="assets/images/tazzaGatti.png" alt="Image 2">
+            <a href="product.html">
+                <div class="carousel">
+                    <button class="prev">&lt;</button>
+                    <div class="carousel-container">
+                        <img src="assets/images/tazza_bassotti.png" alt="Image 1">
+                        <img src="assets/images/tazzaGatti.png" alt="Image 2">
+                    </div>
+                    <button class="next">&gt;</button>
                 </div>
-                <button class="next">&gt;</button>
-            </div>
-            <h3 class="productDescription">Tazza icone</h3>
-            <p>CHF 15</p>
+                <h3 class="productDescription">Tazza icone</h3>
+                <p>CHF 15</p>
+            </a>
             <button class="add-to-cart" data-product="4" data-name="Product 4" data-price="15.00">Aggiungi al carrello</button>
         </div>
         <div class="product">
-            <img src="assets/images/tazza_nome.png" alt="Tazza personalizzata">
-            <h3 class="productDescription">Tazza personalizzabile con nome</h3>
-            <p>CHF 25</p>
+            <a href="product.html">
+                <img src="assets/images/tazza_nome.png" alt="Tazza personalizzata">
+                <h3 class="productDescription">Tazza personalizzabile con nome</h3>
+                <p>CHF 25</p>
+            </a>
             <button class="add-to-cart" data-price="25.00">Aggiungi al carrello</button>
         </div>
         <div class="product">
-            <img src="assets/images/gioco_gatti.png" alt="Gioco per gatti">
-            <h3 class="productDescription">Gioco per gatti</h3>
-            <p>CHF 20</p>
+            <a href="product.html">
+                <img src="assets/images/gioco_gatti.png" alt="Gioco per gatti">
+                <h3 class="productDescription">Gioco per gatti</h3>
+                <p>CHF 20</p>
+            </a>
             <button class="add-to-cart" data-price="20.00">Aggiungi al carrello</button>
         </div>
         <div class="product">
-            <img src="assets/images/tagliere_cervo.png" alt="Tagliere cervo">
-            <h3 class="productDescription">Tagliere in ardesia con cervo</h3>
-            <p>CHF 30</p>
+            <a href="product.html">
+                <img src="assets/images/tagliere_cervo.png" alt="Tagliere cervo">
+                <h3 class="productDescription">Tagliere in ardesia con cervo</h3>
+                <p>CHF 30</p>
+            </a>
             <button class="add-to-cart" data-price="30.00">Aggiungi al carrello</button>
         </div>
         <div class="product">
-            <div class="carousel">
-                <button class="prev">&lt;</button>
-                <div class="carousel-container">
-                    <img src="assets/images/tagliere_love_bianco.png" alt="Image 1">
-                    <img src="assets/images/tagliere_love_blu.png" alt="Image 2">
-                    <img src="assets/images/tagliere_love_giallo.png" alt="Image 3">
+            <a href="product.html">
+                <div class="carousel">
+                    <button class="prev">&lt;</button>
+                    <div class="carousel-container">
+                        <img src="assets/images/tagliere_love_bianco.png" alt="Image 1">
+                        <img src="assets/images/tagliere_love_blu.png" alt="Image 2">
+                        <img src="assets/images/tagliere_love_giallo.png" alt="Image 3">
+                    </div>
+                    <button class="next">&gt;</button>
                 </div>
-                <button class="next">&gt;</button>
-            </div>
-            <h3 class="productDescription">Vassoio love personalizzato</h3>
-            <p>CHF 35</p>
+                <h3 class="productDescription">Vassoio love personalizzato</h3>
+                <p>CHF 35</p>
+            </a>
             <button class="add-to-cart" data-price="35.00">Aggiungi al carrello</button>
         </div>
         <div class="product">
-            <img src="assets/images/orologioLegnoArdesia.png" alt="Orologio in legno e ardesia">
-            <h3 class="productDescription">Orologio in legno e ardesia</h3>
-            <p>CHF 60</p>
+            <a href="product.html">
+                <img src="assets/images/orologioLegnoArdesia.png" alt="Orologio in legno e ardesia">
+                <h3 class="productDescription">Orologio in legno e ardesia</h3>
+                <p>CHF 60</p>
+            </a>
             <button class="add-to-cart" data-price="60.00">Aggiungi al carrello</button>
         </div>
         <div class="product">
-            <img src="assets/images/lampadaLuna3D.png" alt="Lampada luna 3D">
-            <h3 class="productDescription">Lampada luna 3D</h3>
-            <p>CHF 50</p>
+            <a href="product.html">
+                <img src="assets/images/lampadaLuna3D.png" alt="Lampada luna 3D">
+                <h3 class="productDescription">Lampada luna 3D</h3>
+                <p>CHF 50</p>
+            </a>
             <button class="add-to-cart" data-price="50.00">Aggiungi al carrello</button>
         </div>
     </div>
