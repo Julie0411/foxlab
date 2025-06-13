@@ -1,0 +1,159 @@
+#mini-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 20;
+    width: 100%;
+    height: 75px;
+    background-color: #333333;
+    padding: 10px;
+}
+
+#logo-mini {
+    margin-left: 10px;
+    width: 40px;
+    height: auto;
+}
+
+#logo-full {
+    width: 100px;
+    height: auto;
+}
+
+#shop-page body {
+    margin-top: 60px;
+}
+
+.navigator {
+    margin-top: 90px;
+    background-color: #333333;
+    height: fit-content;
+}
+
+.navigator nav {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigator nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 20px;
+    padding: 8px 16px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+
+.navigator nav a:hover {
+    background-color: #936037;
+    color: white;
+}
+
+#shop-footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333333;
+    color: #ededed;
+}
+
+#shop-page body {
+    margin-top: 60px;
+}
+
+.shop-section .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+    justify-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.shop-section .product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.shop-section .productDescription {
+    height: 52px;
+    width: 95%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: "Ubuntu", Arial, sans-serif;
+    margin: 0;
+}
+
+.shop-section .product p {
+    height: max-content;
+    width: 100%;
+    margin: 0 0 10px;
+    font-size: 1rem;
+    color: #333333;
+}
+
+.shop-section {
+    padding: 60px 40px;
+    background-color: #ededed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.shop-section .shop-navigator {
+    position: absolute;
+    top: 70px;
+    background-color: #333333;
+}
+
+.carousel {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ededed;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+.prev {
+    left: 5px;
+}
+
+.next {
+    right: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
