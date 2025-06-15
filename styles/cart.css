@@ -236,7 +236,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 25px; /* Padding verticale */
-    border-bottom: 1px solid #eee; /* Separatore tra gli articoli */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.13); /* Separatore tra gli articoli */
+    margin-bottom: 10px;
 }
 
 /* Informazioni sul prodotto (immagine, nome, prezzo unitario) */
