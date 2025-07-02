@@ -1,111 +1,221 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shop - Foxlab</title>
-    <link rel="stylesheet" href="styles/common.css">
-    <link rel="stylesheet" href="styles/shop.css">
-</head>
-<body>
-
-<header id="mini-header">
-    <img src="assets/images/FoxlabMark.svg" alt="Foxlab Logo" id="logo-mini">
-    <img src="assets/images/FOXLAB.svg" alt="Foxlab Full Logo" id="logo-full">
-    <h1></h1>
-</header>
-
-<section class="navigator">
-    <nav>
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/shop.css" />
+  </head>
+  <body>
+    <header id="mini-header">
+      <div class="logo-area">
+        <img
+          src="assets/images/FoxlabMark.svg"
+          alt="Foxlab Logo"
+          id="logo-mini"
+          style="height: 40px; margin-right: 10px"
+        />
+        <img
+          src="assets/images/FOXLAB.svg"
+          alt="Foxlab Full Logo"
+          id="logo-full"
+          style="height: 32px"
+        />
+      </div>
+      <nav>
         <a href="home.html">Home</a>
         <a href="shop.html">Shop</a>
         <a href="cart.html">Cart <span id="cart-count">0</span></a>
-    </nav>
-</section>
+      </nav>
+    </header>
 
-<section class="shop-section">
-    <div class="title">
-        <h2 style="color: #333333;">I nostri prodotti</h2>
-    </div>
-    <div class="product-list">
-        <div class="product">
-            <a href="product.html">
-                <div class="carousel">
-                    <button class="prev">&lt;</button>
-                    <div class="carousel-container">
-                        <img src="assets/images/tazza_bassotti.png" alt="Image 1">
-                        <img src="assets/images/tazzaGatti.png" alt="Image 2">
-                    </div>
-                    <button class="next">&gt;</button>
-                </div>
-                <h3 class="productDescription">Tazza icone</h3>
-                <p>CHF 15</p>
+    <section class="shop-section">
+      <div class="title">
+        <h2 style="color: #333333">I nostri prodotti</h2>
+      </div>
+      <div class="product-list">
+        <div
+          class="product"
+          data-product-id="tazza-icone"
+          data-product-name="Tazza icone"
+          data-product-price="15"
+          data-product-img="assets/images/tazza_bassotti.png"
+          data-product-description="Tazza in ceramica con icone simpatiche di bassotti e gatti."
+        >
+          <div class="carousel">
+            <button class="prev">&lt;</button>
+            <a href="product.html?id=tazza-icone">
+              <div class="carousel-container">
+                <img src="assets/images/tazza_bassotti.png" alt="Image 1" />
+                <img src="assets/images/tazzaGatti.png" alt="Image 2" />
+              </div>
             </a>
-            <button class="add-to-cart" data-product="tazza-icone" data-price="15.00">Aggiungi al carrello</button>
+            <button class="next">&gt;</button>
+          </div>
+          <h3 class="productDescription">Tazza icone</h3>
+          <p>CHF 15</p>
+          <button
+            class="add-to-cart"
+            data-product="tazza-icone"
+            data-price="15.00"
+          >
+            Aggiungi al carrello
+          </button>
         </div>
-        <div class="product">
-            <a href="product.html">
-                <img src="assets/images/tazza_nome.png" alt="Tazza personalizzata">
-                <h3 class="productDescription">Tazza personalizzabile con nome</h3>
-                <p>CHF 25</p>
-            </a>
-            <button class="add-to-cart" data-product="tazza-personalizzabile" data-price="25.00">Aggiungi al carrello</button>
+        <div
+          class="product"
+          data-product-id="tazza-personalizzabile"
+          data-product-name="Tazza personalizzabile con nome"
+          data-product-price="25"
+          data-product-img="assets/images/tazza_nome.png"
+          data-product-description="Tazza in ceramica personalizzabile con il tuo nome."
+        >
+          <a href="product.html?id=tazza-personalizzabile">
+            <img
+              src="assets/images/tazza_nome.png"
+              alt="Tazza personalizzata"
+            />
+            <h3 class="productDescription">Tazza personalizzabile con nome</h3>
+            <p>CHF 25</p>
+          </a>
+          <button
+            class="add-to-cart"
+            data-product="tazza-personalizzabile"
+            data-price="25.00"
+          >
+            Aggiungi al carrello
+          </button>
         </div>
-        <div class="product">
-            <a href="product.html">
-                <img src="assets/images/gioco_gatti.png" alt="Gioco per gatti">
-                <h3 class="productDescription">Gioco per gatti</h3>
-                <p>CHF 20</p>
-            </a>
-            <button class="add-to-cart" data-product="gioco-gatti" data-price="20.00">Aggiungi al carrello</button>
+        <div
+          class="product"
+          data-product-id="gioco-gatti"
+          data-product-name="Gioco per gatti"
+          data-product-price="20"
+          data-product-img="assets/images/gioco_gatti.png"
+          data-product-description="Gioco interattivo per gatti, stimola la curiosità e il movimento."
+        >
+          <a href="product.html?id=gioco-gatti">
+            <img src="assets/images/gioco_gatti.png" alt="Gioco per gatti" />
+            <h3 class="productDescription">Gioco per gatti</h3>
+            <p>CHF 20</p>
+          </a>
+          <button
+            class="add-to-cart"
+            data-product="gioco-gatti"
+            data-price="20.00"
+          >
+            Aggiungi al carrello
+          </button>
         </div>
-        <div class="product">
-            <a href="product.html">
-                <img src="assets/images/tagliere_cervo.png" alt="Tagliere cervo">
-                <h3 class="productDescription">Tagliere in ardesia con cervo</h3>
-                <p>CHF 30</p>
-            </a>
-            <button class="add-to-cart" data-product="tagliere-cervo" data-price="30.00">Aggiungi al carrello</button>
+        <div
+          class="product"
+          data-product-id="tagliere-cervo"
+          data-product-name="Tagliere in ardesia con cervo"
+          data-product-price="30"
+          data-product-img="assets/images/tagliere_cervo.png"
+          data-product-description="Tagliere in ardesia inciso con sagoma di cervo, elegante e resistente."
+        >
+          <a href="product.html?id=tagliere-cervo">
+            <img src="assets/images/tagliere_cervo.png" alt="Tagliere cervo" />
+            <h3 class="productDescription">Tagliere in ardesia con cervo</h3>
+            <p>CHF 30</p>
+          </a>
+          <button
+            class="add-to-cart"
+            data-product="tagliere-cervo"
+            data-price="30.00"
+          >
+            Aggiungi al carrello
+          </button>
         </div>
-        <div class="product">
-            <a href="product.html">
-                <div class="carousel">
-                    <button class="prev">&lt;</button>
-                    <div class="carousel-container">
-                        <img src="assets/images/tagliere_love_bianco.png" alt="Image 1">
-                        <img src="assets/images/tagliere_love_blu.png" alt="Image 2">
-                        <img src="assets/images/tagliere_love_giallo.png" alt="Image 3">
-                    </div>
-                    <button class="next">&gt;</button>
-                </div>
-                <h3 class="productDescription">Vassoio love personalizzato</h3>
-                <p>CHF 35</p>
-            </a>
-            <button class="add-to-cart" data-product="vassoio-love" data-price="35.00">Aggiungi al carrello</button>
+        <div
+          class="product"
+          data-product-id="vassoio-love"
+          data-product-name="Vassoio love personalizzato"
+          data-product-price="35"
+          data-product-img="assets/images/tagliere_love_bianco.png"
+          data-product-description="Vassoio in ardesia personalizzato con scritta love, disponibile in vari colori."
+        >
+          <a href="product.html?id=vassoio-love">
+            <div class="carousel">
+              <button class="prev">&lt;</button>
+              <div class="carousel-container">
+                <img
+                  src="assets/images/tagliere_love_bianco.png"
+                  alt="Image 1"
+                />
+                <img src="assets/images/tagliere_love_blu.png" alt="Image 2" />
+                <img
+                  src="assets/images/tagliere_love_giallo.png"
+                  alt="Image 3"
+                />
+              </div>
+              <button class="next">&gt;</button>
+            </div>
+            <h3 class="productDescription">Vassoio love personalizzato</h3>
+            <p>CHF 35</p>
+          </a>
+          <button
+            class="add-to-cart"
+            data-product="vassoio-love"
+            data-price="35.00"
+          >
+            Aggiungi al carrello
+          </button>
         </div>
-        <div class="product">
-            <a href="product.html">
-                <img src="assets/images/orologioLegnoArdesia.png" alt="Orologio in legno e ardesia">
-                <h3 class="productDescription">Orologio in legno e ardesia</h3>
-                <p>CHF 60</p>
-            </a>
-            <button class="add-to-cart" data-product="orologio-legno-ardesia" data-price="60.00">Aggiungi al carrello</button>
+        <div
+          class="product"
+          data-product-id="orologio-legno-ardesia"
+          data-product-name="Orologio in legno e ardesia"
+          data-product-price="60"
+          data-product-img="assets/images/orologioLegnoArdesia.png"
+          data-product-description="Orologio da parete realizzato in legno e ardesia, design unico."
+        >
+          <a href="product.html?id=orologio-legno-ardesia">
+            <img
+              src="assets/images/orologioLegnoArdesia.png"
+              alt="Orologio in legno e ardesia"
+            />
+            <h3 class="productDescription">Orologio in legno e ardesia</h3>
+            <p>CHF 60</p>
+          </a>
+          <button
+            class="add-to-cart"
+            data-product="orologio-legno-ardesia"
+            data-price="60.00"
+          >
+            Aggiungi al carrello
+          </button>
         </div>
-        <div class="product">
-            <a href="product.html">
-                <img src="assets/images/lampadaLuna3D.png" alt="Lampada luna 3D">
-                <h3 class="productDescription">Lampada luna 3D</h3>
-                <p>CHF 50</p>
-            </a>
-            <button class="add-to-cart" data-product="lampada-luna-3d" data-price="50.00">Aggiungi al carrello</button>
+        <div
+          class="product"
+          data-product-id="lampada-luna-3d"
+          data-product-name="Lampada luna 3D"
+          data-product-price="50"
+          data-product-img="assets/images/lampadaLuna3D.png"
+          data-product-description="Lampada decorativa a forma di luna 3D, perfetta come luce notturna."
+        >
+          <a href="product.html?id=lampada-luna-3d">
+            <img src="assets/images/lampadaLuna3D.png" alt="Lampada luna 3D" />
+            <h3 class="productDescription">Lampada luna 3D</h3>
+            <p>CHF 50</p>
+          </a>
+          <button
+            class="add-to-cart"
+            data-product="lampada-luna-3d"
+            data-price="50.00"
+          >
+            Aggiungi al carrello
+          </button>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<footer id="shop-footer">
-    <p>© 2025 Foxlab shop</p>
-</footer>
+    <footer id="shop-footer">
+      <p>© 2025 Foxlab shop</p>
+    </footer>
 
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

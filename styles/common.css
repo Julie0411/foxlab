@@ -1,198 +1,216 @@
 @font-face {
-    font-family: 'Open-Sans';
-    src: url('/assets/Open_Sans,Ubuntu/Open_Sans/static/OpenSans-Regular.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Open-Sans";
+  src: url("/assets/Open_Sans,Ubuntu/Open_Sans/static/OpenSans-Regular.ttf")
+    format("ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'Ubuntu';
-    src: url('/assets/Open_Sans,Ubuntu/Ubuntu/Ubuntu-Bold.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Ubuntu";
+  src: url("/assets/Open_Sans,Ubuntu/Ubuntu/Ubuntu-Bold.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --fox-primary: #a86c3c;
+  --fox-primary-dark: #7a4d28;
+  --fox-bg: #ededed;
+  --fox-bg-card: #fff;
+  --fox-text: #222;
+  --fox-text-light: #444;
+  --fox-header-bg: #333333;
+  --fox-border-radius: 16px;
+  --fox-shadow: 0 2px 12px rgba(0, 0, 0, 0.09);
+  --fox-gap: 30px;
+  --fox-padding: 20px;
+  --fox-font: "Open-Sans", Arial, sans-serif;
 }
 
 body {
-    font-family: "Open-Sans", Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ededed;
+  font-family: var(--fox-font);
+  margin: 0;
+  padding: 0;
+  background-color: var(--fox-bg);
 }
 
 header {
-    text-align: center;
-    padding: 40px 0;
-    background-color: #333333;
-    color: white;
-    position: relative;
+  text-align: center;
+  padding: 40px 0;
+  background-color: var(--fox-header-bg);
+  color: var(--fox-bg-card);
+  position: relative;
 }
 
 #logo {
-    max-width: 260px;
-    height: auto;
-    border-top: 3px solid #333333;
-    padding-top: 10px;
-    margin-bottom: 10px;
+  max-width: 260px;
+  height: auto;
+  border-top: 3px solid var(--fox-header-bg);
+  padding-top: 10px;
+  margin-bottom: 10px;
 }
 
 header h1 {
-    font-size: 2rem;
-    margin-top: 10px;
-    font-weight: bold;
-    font-family: "Ubuntu", Arial, sans-serif;
+  font-size: 2rem;
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: "Ubuntu", Arial, sans-serif;
 }
 
 header img {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .navigator {
-    background-color: #333333;
-    padding: 10px 0;
+  background-color: var(--fox-header-bg);
+  border-radius: 0 0 var(--fox-border-radius) var(--fox-border-radius);
+  box-shadow: var(--fox-shadow);
+  padding: 10px 0;
 }
 
 .navigator nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .navigator nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    margin: 0 20px;
-    padding: 8px 16px;
-    transition: background-color 0.3s, color 0.3s;
-    border-radius: 4px;
+  color: var(--fox-bg-card);
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 20px;
+  padding: 8px 16px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 4px;
 }
 
 .navigator nav a:hover {
-    background-color: #936037;
-    color: white;
+  background-color: var(--fox-primary-dark);
+  color: var(--fox-bg-card);
 }
 
 .buttonSpace {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-    width: 100%;
-    clear: both;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+  clear: both;
 }
 
 .buttonSpace a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .buttonSpace button {
-    background-color: #936037;
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: "Open-Sans", Arial, sans-serif;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
+  background-color: var(--fox-primary);
+  color: var(--fox-bg-card);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: var(--fox-font);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 .buttonSpace button:hover {
-    background-color: #7d4e24;
-    transform: translateY(-4px);
+  background-color: var(--fox-primary-dark);
+  transform: translateY(-4px);
 }
 
 .buttonSpace button:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(147, 96, 55, 0.8);
+  outline: none;
+  box-shadow: 0 0 5px rgba(168, 108, 60, 0.8);
 }
 
 #cart-count {
-    font-weight: bold;
-    padding: 3px 8px;
-    font-size: 14px;
+  font-weight: bold;
+  padding: 3px 8px;
+  font-size: 14px;
 }
 
 footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #ededed;
-    color: #333333;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--fox-bg);
+  color: var(--fox-header-bg);
 }
 
 .title {
-    font-size: 2rem;
-    width: 95%;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 40px 0 20px 0;
+  font-size: 2rem;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 40px 0 20px 0;
 }
 
 .title h2 {
-    font-family: "Open-Sans", Arial, sans-serif;
-    font-weight: bold;
-    color: #333333;
-    text-align: left;
-    margin: 0;
+  font-family: var(--fox-font);
+  font-weight: bold;
+  color: var(--fox-header-bg);
+  text-align: left;
+  margin: 0;
 }
 
 button {
-    padding: 10px;
-    background-color: #936037;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  padding: 10px;
+  background-color: var(--fox-primary);
+  color: var(--fox-bg-card);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #7D4E24;
+  background-color: var(--fox-primary-dark);
 }
 
 .product {
-    flex: 0 0 auto;
-    width: 230px;
-    padding: 15px;
-    margin: 0;
-    background-color: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  flex: 0 0 auto;
+  width: 230px;
+  padding: 15px;
+  margin: 0;
+  background-color: var(--fox-bg-card);
+  border-radius: var(--fox-border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .product h3 {
-    font-size: 16px;
-    padding: 5%;
-    overflow: inherit;
-    text-align: center;
-    font-family: "Ubuntu", Arial, sans-serif;
-    margin-top: 5px;
+  font-size: 16px;
+  padding: 5%;
+  overflow: inherit;
+  text-align: center;
+  font-family: "Ubuntu", Arial, sans-serif;
+  margin-top: 5px;
 }
 
 .product img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 #product-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    padding: 20px;
-    margin-bottom: 50px;
-    overflow-x: auto;
-    white-space: nowrap;
-    scroll-behavior: smooth;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  margin-bottom: 50px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
 }

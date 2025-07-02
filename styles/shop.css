@@ -1,159 +1,188 @@
-#mini-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    z-index: 20;
-    width: 100%;
-    height: 75px;
-    background-color: #333333;
-    padding: 10px;
+:root {
+  --fox-primary: #a86c3c;
+  --fox-primary-dark: #7a4d28;
+  --fox-bg: #ededed;
+  --fox-bg-card: #fff;
+  --fox-text: #222;
+  --fox-text-light: #444;
+  --fox-header-bg: #333;
+  --fox-border-radius: 16px;
+  --fox-shadow: 0 2px 12px rgba(0,0,0,0.09);
+  --fox-gap: 30px;
+  --fox-padding: 40px;
 }
 
-#logo-mini {
-    margin-left: 10px;
-    width: 40px;
-    height: auto;
+#mini-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--fox-header-bg);
+  border-radius: 0 0 var(--fox-border-radius) var(--fox-border-radius);
+  box-shadow: var(--fox-shadow);
+  padding: var(--fox-padding);
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.logo-area {
+  position: absolute;
+  left: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#mini-header nav {
+  display: flex;
+  gap: 64px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+#mini-header nav a {
+  color: var(--fox-bg);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+#mini-header nav a:hover {
+  color: var(--fox-primary-dark);
 }
 
 #logo-full {
-    width: 100px;
-    height: auto;
+  width: 100px;
+  height: auto;
 }
 
 #shop-page body {
-    margin-top: 60px;
+  margin-top: 60px;
 }
 
 .navigator {
-    margin-top: 90px;
-    background-color: #333333;
-    height: fit-content;
+  margin-top: 90px;
+  background-color: var(--fox-header-bg);
+  height: fit-content;
 }
 
 .navigator nav {
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navigator nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    margin: 20px;
-    padding: 8px 16px;
-    transition: background-color 0.3s, color 0.3s;
-    border-radius: 4px;
+  color: var(--fox-bg-card);
+  text-decoration: none;
+  font-size: 18px;
+  margin: 20px;
+  padding: 8px 16px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 4px;
 }
 
 .navigator nav a:hover {
-    background-color: #936037;
-    color: white;
+  background-color: var(--fox-primary-dark);
+  color: var(--fox-bg-card);
 }
 
 #shop-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333333;
-    color: #ededed;
-}
-
-#shop-page body {
-    margin-top: 60px;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--fox-header-bg);
+  color: var(--fox-bg);
 }
 
 .shop-section .product-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 25px;
-    justify-items: center;
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .shop-section .product img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 .shop-section .productDescription {
-    height: 52px;
-    width: 95%;
-    font-size: 1.1rem;
-    font-weight: bold;
-    font-family: "Ubuntu", Arial, sans-serif;
-    margin: 0;
+  height: 52px;
+  width: 95%;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: "Ubuntu", Arial, sans-serif;
+  margin: 0;
 }
 
 .shop-section .product p {
-    height: max-content;
-    width: 100%;
-    margin: 0 0 10px;
-    font-size: 1rem;
-    color: #333333;
+  height: max-content;
+  width: 100%;
+  margin: 0 0 10px;
+  font-size: 1rem;
+  color: var(--fox-text);
 }
 
 .shop-section {
-    padding: 60px 40px;
-    background-color: #ededed;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+  padding: 60px 40px;
+  background-color: var(--fox-bg);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--fox-gap);
 }
 
 .shop-section .shop-navigator {
-    position: absolute;
-    top: 70px;
-    background-color: #333333;
+  position: absolute;
+  top: 70px;
+  background-color: var(--fox-header-bg);
 }
 
 .carousel {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
 }
 
 .carousel-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
 }
 
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #ededed;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 10;
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--fox-bg);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
 }
 
 .prev {
-    left: 5px;
+  left: 5px;
 }
 
 .next {
-    right: 5px;
+  right: 5px;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: var(--fox-text);
 }
