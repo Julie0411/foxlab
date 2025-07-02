@@ -1,49 +1,64 @@
+:root {
+  --fox-primary: #a86c3c;
+  --fox-primary-dark: #7a4d28;
+  --fox-bg: #ededed;
+  --fox-bg-card: #fff;
+  --fox-text: #222;
+  --fox-text-light: #444;
+  --fox-header-bg: #333333;
+  --fox-border-radius: 16px;
+  --fox-shadow: 0 2px 12px rgba(0,0,0,0.09);
+  --fox-gap: 30px;
+  --fox-padding: 20px;
+  --fox-font: "Ubuntu", Arial, sans-serif;
+}
+
 .mission-section {
-    background-color: #333333;
-    text-align: center;
-    padding: 20px;
+  background-color: var(--fox-header-bg);
+  text-align: center;
+  padding: var(--fox-padding);
 }
 
 .subtitle {
-    font-size: 1.25rem;
-    color: #ededed;
-    max-width: 95%;
-    margin: 0 auto 40px auto;
-    line-height: 1.6;
+  font-size: 1.25rem;
+  color: var(--fox-bg);
+  max-width: 95%;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
 }
 
 .icons-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--fox-gap);
+  margin-bottom: 40px;
 }
 
 .icon-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--fox-padding);
+  width: 200px;
 }
 
 .icon-box img {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .icon-box p {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #ededed;
-    margin: 0;
-    font-family: "Ubuntu", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--fox-bg);
+  margin: 0;
+  font-family: var(--fox-font);
 }
 
 .description {
-    font-size: 1.15rem;
-    color: #ededed;
-    max-width: 95%;
-    margin-bottom: 40px;
-    line-height: 1.8;
+  font-size: 1.15rem;
+  color: var(--fox-bg);
+  max-width: 95%;
+  margin-bottom: 40px;
+  line-height: 1.8;
 }

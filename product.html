@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prodotto - Foxlab</title>
+    <link rel="stylesheet" href="styles/product.css" />
+  </head>
+  <body>
+    <header id="mini-header">
+      <div class="logo-area">
+        <img
+          src="assets/images/FoxlabMark.svg"
+          alt="Foxlab Logo"
+          id="logo-mini"
+          style="height: 40px; margin-right: 10px"
+        />
+        <img
+          src="assets/images/FOXLAB.svg"
+          alt="Foxlab Full Logo"
+          id="logo-full"
+          style="height: 32px"
+        />
+      </div>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart <span id="cart-count">0</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="product-two-cols">
+        <div class="product-img-col">
+          <img id="product-img" src="" alt="Immagine prodotto" />
+        </div>
+        <div class="product-details-col">
+          <span class="brand">Foxlab</span>
+          <h1 id="product-name"></h1>
+          <p id="product-price"></p>
+          <p id="product-description"></p>
+          <button class="add-to-cart">Aggiungi al carrello</button>
+          <a href="shop.html" class="back-to-shop">← Torna allo shop</a>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      style="
+        margin-top: 40px;
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        border-radius: 0 0 16px 16px;
+      "
+    >
+      <p style="margin: 0">&copy; 2025 Foxlab. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
