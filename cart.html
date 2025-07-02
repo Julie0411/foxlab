@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Il tuo carrello - Foxlab</title>
+  <link rel="stylesheet" href="styles/common.css">
+  <link rel="stylesheet" href="styles/cart.css">
+</head>
+<body>
+
+<header id="mini-header">
+  <img src="assets/images/FoxlabMark.svg" alt="Foxlab Logo" id="logo-mini">
+  <img src="assets/images/FOXLAB.svg" alt="Foxlab Full Logo" id="logo-full">
+</header>
+
+<section class="navigator">
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="cart.html">Cart <span id="cart-count">0</span></a>
+  </nav>
+</section>
+
+<div class="cart-page-container">
+
+  <main class="cart-content-wrapper">
+    <div class="cart-items-section">
+      <div class="cart-table-header">
+        <span class="product-header-col">Prodotto</span>
+        <span class="quantity-header-col">Qunatità</span>
+        <span class="total-header-col">Totale</span>
+      </div>
+
+      <div id="cart-list" class="cart-list">
+      </div>
+    </div>
+
+    <aside class="cart-summary">
+      <div class="subtotal-row">
+        <span>Subtotale</span>
+        <span id="cart-total">CHF0.00</span>
+      </div>
+      <p class="taxes-info">Imposte incluse. <a href="#">Spese di spedizione</a> calcolate al check-out.</p>
+
+      <button class="checkout-btn">Check-out</button>
+      <button class="shop-pay-btn">shop Pay</button>
+      <button class="apple-pay-btn"> Pay</button>
+      <button class="google-pay-btn">G Pay</button>
+      <button id="clear-cart-btn" class="clear-cart-btn">Svuota carrello</button>
+    </aside>
+  </main>
+</div>
+
+<footer id="shop-footer">
+  <p>© 2025 Foxlab shop</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
