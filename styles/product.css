@@ -1,72 +1,3 @@
-:root {
-  --fox-primary: #a86c3c;
-  --fox-primary-dark: #7a4d28;
-  --fox-bg: #f5f5f7;
-  --fox-bg-card: #fff;
-  --fox-text: #222;
-  --fox-text-light: #444;
-  --fox-header-bg: #333;
-  --fox-border-radius: 16px;
-  --fox-shadow: 0 2px 12px rgba(0, 0, 0, 0.09);
-  --fox-gap: 48px;
-  --fox-padding: 32px;
-}
-
-body {
-  background: var(--fox-bg);
-  font-family: "Ubuntu", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#mini-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--fox-header-bg);
-  border-radius: 0 0 var(--fox-border-radius) var(--fox-border-radius);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-  padding: var(--fox-padding);
-  margin-bottom: 40px;
-  position: relative;
-}
-
-.logo-area {
-  position: absolute;
-  left: 32px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-#mini-header nav {
-  display: flex;
-  gap: 64px;
-  margin: 0 auto;
-  justify-content: center;
-}
-
-#mini-header nav a {
-  color: #f5f5f7;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: color 0.2s;
-}
-#mini-header nav a:hover {
-  color: var(--fox-primary-dark);
-}
-
 .product-container {
   background: var(--fox-bg-card);
   max-width: 420px;
@@ -289,8 +220,15 @@ main {
   color: #fff;
 }
 
+#product-footer {
+  text-align: center;
+  padding: 10px;
+  background-color: var(--fox-header-bg);
+  color: var(--fox-bg);
+}
+
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 500px) {
   .product-two-cols {
     flex-direction: column;
     width: 100vw;

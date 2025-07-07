@@ -228,3 +228,45 @@ button:hover {
     margin-right: 0;
   }
 }
+
+@media (max-width: 500px) {
+  #mini-header {
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding: 16px 8px !important;
+    gap: 12px !important;
+    min-height: unset !important;
+    width: 100vw !important;
+    box-sizing: border-box;
+  }
+
+  .logo-area {
+    position: static !important;
+    margin-bottom: 10px !important;
+    justify-content: center !important;
+    width: 23% !important;
+    gap: 8px !important;
+    display: flex !important;
+    flex-direction: row !important;
+  }
+
+  .logo-area #logo-full {
+    display: none
+  }
+
+  #mini-header nav {
+    gap: 18px !important;
+    width: 70% !important;
+    align-items: center !important;
+    margin: 0 !important;
+    margin-right: 10px !important;
+  }
+
+  #mini-header nav a {
+    font-size: 1.05rem !important;
+    padding: 6px 0 !important;
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
