@@ -17,7 +17,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--fox-bg);
-  font-family: var(--fox-font);
+  font-family: var(--fox-font), sans-serif;
 }
 
 main {
@@ -142,4 +142,5 @@ main {
     width: 100%;
     text-align: center;
   }
+
 }

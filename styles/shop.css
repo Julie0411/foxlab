@@ -20,7 +20,6 @@
   border-radius: 0 0 var(--fox-border-radius) var(--fox-border-radius);
   box-shadow: var(--fox-shadow);
   padding: var(--fox-padding);
-  margin-bottom: 40px;
   position: relative;
 }
 
@@ -129,7 +128,7 @@
 }
 
 .shop-section {
-  padding: 60px 40px;
+  padding: 20px 40px;
   background-color: var(--fox-bg);
   display: flex;
   flex-wrap: wrap;
