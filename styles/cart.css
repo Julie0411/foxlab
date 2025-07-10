@@ -529,7 +529,6 @@ footer {
     flex-direction: column;
   }
 
-  .cart-table-header,
   .cart-item {
     flex-direction: column;
     align-items: flex-start;
