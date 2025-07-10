@@ -26,6 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Funzione per visualizzare/rendere gli elementi del carrello nella pagina cart.html
     function renderCart() {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200';
+        document.head.appendChild(link);
+
         const cart = loadCart();
         if (!cartList || !cartTotalElement) {
             updateCartCount(); // Se non siamo nella pagina del carrello, aggiorna solo il conteggio
@@ -64,8 +69,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button class="minus-btn">-</button>
                     <input type="number" value="${item.quantity}" min="1" class="item-quantity">
                     <button class="plus-btn">+</button>
-                    <button class="remove-item-btn">🗑️</button>
                 </div>
+                <button class="remove-item-btn">
+                  <span class="material-symbols-outlined">delete</span>
+                </button>
                 <div class="item-total">CHF ${itemTotalPrice.toFixed(2)}</div>
             `;
             cartList.appendChild(itemElement);

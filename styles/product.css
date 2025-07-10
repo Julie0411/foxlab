@@ -23,11 +23,93 @@ body {
 main {
   padding: var(--fox-gap) var(--fox-padding);
   max-width: 1200px;
-  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: 15%;
   background-color: var(--fox-bg-card);
   color: var(--fox-text);
   border-radius: var(--fox-border-radius);
   box-shadow: var(--fox-shadow);
+}
+
+#mini-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--fox-header-bg);
+  border-radius: 0 0 var(--fox-border-radius) var(--fox-border-radius);
+  box-shadow: var(--fox-shadow);
+  position: relative;
+}
+
+.logo-area {
+  position: absolute;
+  left: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#mini-header nav {
+  display: flex;
+  gap: 64px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+#mini-header nav a {
+  color: var(--fox-bg);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+#mini-header nav a:hover {
+  color: var(--fox-primary-dark);
+}
+
+#logo-full {
+  width: 100px;
+  height: auto;
+}
+
+#shop-page body {
+  margin-top: 60px;
+}
+
+.navigator {
+  margin-top: 90px;
+  background-color: var(--fox-header-bg);
+  height: fit-content;
+}
+
+.navigator nav {
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigator nav a {
+  color: var(--fox-bg-card);
+  text-decoration: none;
+  font-size: 18px;
+  margin: 20px;
+  padding: 8px 16px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 4px;
+}
+
+.navigator nav a:hover {
+  background-color: var(--fox-primary-dark);
+  color: var(--fox-bg-card);
+}
+
+#shop-footer {
+  text-align: center;
+  padding: 10px;
+  background-color: var(--fox-header-bg);
+  color: var(--fox-bg);
 }
 
 .product-two-cols {
@@ -51,10 +133,10 @@ main {
 }
 
 .product-details-col {
-  flex: 1 1 400px;
+  flex: 1 1 19.5rem;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 5px;
 }
 
 .product-details-col .brand {
@@ -84,7 +166,7 @@ main {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
-  width: fit-content;
+  width: 12rem;
 }
 
 .add-to-cart:hover {
@@ -97,6 +179,10 @@ main {
   color: var(--fox-text-light);
   text-decoration: none;
   font-size: 14px;
+  border: 2px solid var(--fox-text-light);
+  padding: 10px;
+  border-radius: calc(var(--fox-border-radius) / 2);
+  width: 10.5rem;
 }
 
 .back-to-shop:hover {
@@ -104,10 +190,13 @@ main {
 }
 
 #product-footer {
-  text-align: center;
-  padding: 10px;
   background-color: var(--fox-header-bg);
   color: var(--fox-bg);
+}
+
+#product-footer p {
+  margin: 0;
+  padding: 25px;
 }
 
 @media (max-width: 500px) {
@@ -131,6 +220,80 @@ main {
     border-radius: 0 !important;
     box-shadow: none !important;
     background-color: var(--fox-bg-card);
+  }
+
+  #mini-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--fox-header-bg);
+    border-radius: 0 0 var(--fox-border-radius) var(--fox-border-radius);
+    box-shadow: var(--fox-shadow);
+    padding: var(--fox-padding);
+    position: relative;
+  }
+
+  .logo-area {
+    position: absolute;
+    left: 32px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  #mini-header nav {
+    display: flex;
+    gap: 64px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  #mini-header nav a {
+    color: var(--fox-bg);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+  }
+  #mini-header nav a:hover {
+    color: var(--fox-primary-dark);
+  }
+
+  #logo-full {
+    width: 100px;
+    height: auto;
+  }
+
+  #shop-page body {
+    margin-top: 60px;
+  }
+
+  .navigator {
+    margin-top: 90px;
+    background-color: var(--fox-header-bg);
+    height: fit-content;
+  }
+
+  .navigator nav {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navigator nav a {
+    color: var(--fox-bg-card);
+    text-decoration: none;
+    font-size: 18px;
+    margin: 20px;
+    padding: 8px 16px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+  }
+
+  .navigator nav a:hover {
+    background-color: var(--fox-primary-dark);
+    color: var(--fox-bg-card);
   }
 
   .product-two-cols {
