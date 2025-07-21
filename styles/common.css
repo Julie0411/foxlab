@@ -133,10 +133,30 @@ header img {
   font-size: 14px;
 }
 
-footer {
+.footer {
+  padding: 0 1.5rem;
   text-align: center;
-  padding: 10px;
   background-color: var(--fox-bg);
+  color: var(--fox-header-bg);
+}
+
+.footer .footer-flex {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.follow {
+  display: inline;
+}
+
+.footer h4 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer a {
+  margin: 0.2rem;
   color: var(--fox-header-bg);
 }
 
