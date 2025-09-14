@@ -1,11 +1,11 @@
 :root {
-  --fox-primary: #a86c3c;
-  --fox-primary-dark: #7a4d28;
+  --fox-primary: #444;
+  --fox-primary-dark: #333333;
   --fox-bg: #ededed;
   --fox-bg-card: #fff;
   --fox-text: #222;
   --fox-text-light: #444;
-  --fox-header-bg: #3f3f3f;
+  --fox-header-bg: #333333;
   --fox-border-radius: 16px;
   --fox-shadow: 0 2px 12px rgba(0,0,0,0.09);
   --fox-gap: 30px;

@@ -19,20 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Funzione per aggiornare il conteggio del carrello nella navigazione
     function updateCartCount() {
         const cart = loadCart();
-        // Somma tutte le quantità
-        const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
         cartCountElements.forEach(el => {
-            el.textContent = totalItems;
+            el.textContent = cart.length; // Conta gli *articoli unici*, non la quantità totale
         });
     }
 
     // Funzione per visualizzare/rendere gli elementi del carrello nella pagina cart.html
     function renderCart() {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200';
-        document.head.appendChild(link);
-
         const cart = loadCart();
         if (!cartList || !cartTotalElement) {
             updateCartCount(); // Se non siamo nella pagina del carrello, aggiorna solo il conteggio
@@ -72,9 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <input type="number" value="${item.quantity}" min="1" class="item-quantity">
                     <button class="plus-btn">+</button>
                 </div>
-                <button class="remove-item-btn">
-                  <span class="material-symbols-outlined">delete</span>
-                </button>
+                <button class="remove-item-btn">🗑️</button>
                 <div class="item-total">CHF ${itemTotalPrice.toFixed(2)}</div>
             `;
             cartList.appendChild(itemElement);
@@ -95,12 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (cartList) {
         cartList.addEventListener('click', (event) => {
-            let target = event.target;
-            // Se clicchi sull'icona dentro il bottone, risali al bottone
-            if (target.classList.contains('material-symbols-outlined')) {
-                target = target.closest('.remove-item-btn');
-            }
+            const target = event.target;
             const cartItemElement = target.closest('.cart-item');
+
             if (!cartItemElement) return;
 
             const itemId = cartItemElement.dataset.id;
@@ -119,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (target.classList.contains('plus-btn')) {
                 cart[itemIndex].quantity++;
             } else if (target.classList.contains('remove-item-btn')) {
-                cart.splice(itemIndex, 1);
+                ƒcart.splice(itemIndex, 1);
             }
 
             saveCart(cart);
@@ -187,16 +175,21 @@ document.addEventListener('DOMContentLoaded', () => {
             const product = event.target.closest('.product');
             const productId = event.target.getAttribute('data-product');
             const productName = product.querySelector('.productDescription')?.textContent || "Prodotto Sconosciuto";
-            const priceElement = product.querySelector('.product p:last-of-type');
+            // Prendi il prezzo dall'elemento corretto, assumendo che sia l'ultimo p prima del bottone
+            // o un elemento specifico con una classe per il prezzo
+            const priceElement = product.querySelector('.product p:last-of-type'); // Adjust selector if needed
             let productPrice;
             if (priceElement && priceElement.textContent.includes('CHF')) {
                 productPrice = parseFloat(priceElement.textContent.replace('CHF ', '').trim());
             } else {
-                productPrice = 0;
+                console.warn("Prezzo non trovato o formato non corretto per il prodotto:", productName);
+                productPrice = 0; // Default a 0 o gestisci l'errore
             }
+
             const imageSrc = product.querySelector('.carousel img')?.src || product.querySelector('img')?.src || '';
 
             if (isNaN(productPrice)) {
+                console.error("Impossibile aggiungere il prodotto al carrello: prezzo non valido per", productName);
                 alert("Impossibile aggiungere il prodotto al carrello: prezzo non valido.");
                 return;
             }
@@ -208,17 +201,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 image: imageSrc
             };
 
-            window.addProductToCart(newItem);
-            
-            // Feedback testo
-            button.textContent = "Aggiunto!";
-            setTimeout(() => {
-                button.textContent = "Aggiungi al carrello";
-                button.classList.remove('animated');
-            }, 1200);
-
-            // Aggiorna subito il numero del carrello
-            if (typeof updateCartCount === "function") updateCartCount();
+            window.addProductToCart(newItem); // Usa la funzione centralizzata
+            alert(`${newItem.name} aggiunto al carrello!`);
         });
     });
 
@@ -399,23 +383,3 @@ document.addEventListener('DOMContentLoaded', function() {
         if (link && id) link.href = `product.html?id=${id}`;
     });
 });
-
-if (document.querySelector('.add-to-cart') && document.getElementById('product-name')) {
-    document.querySelector('.add-to-cart').addEventListener('click', function() {
-        // Prendi i dati dal DOM
-        const name = document.getElementById('product-name').textContent;
-        const price = parseFloat(document.getElementById('product-price').textContent.replace(/[^\d.,]/g, '').replace(',', '.'));
-        const img = document.getElementById('product-img').getAttribute('src');
-        const id = new URLSearchParams(window.location.search).get('id') || name; // fallback su nome
-
-        // Crea oggetto prodotto
-        const productData = { id, name, price, image: img };
-
-        // Usa la funzione centralizzata
-        window.addProductToCart(productData);
-
-        // Feedback utente
-        this.textContent = "Aggiunto!";
-        setTimeout(() => { this.textContent = "Aggiungi al carrello"; }, 1200);
-    });
-}
