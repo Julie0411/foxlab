@@ -1,40 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Riferimenti agli elementi DOM del carrello
     const cartList = document.getElementById('cart-list');
     const cartTotalElement = document.getElementById('cart-total');
     const cartCountElements = document.querySelectorAll('#cart-count');
     const clearCartButton = document.getElementById('clear-cart-btn');
 
-    // Funzione per caricare il carrello da localStorage
     function loadCart() {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         return cart;
     }
 
-    // Funzione per salvare il carrello in localStorage
     function saveCart(cart) {
         localStorage.setItem('cart', JSON.stringify(cart));
     }
 
-    // Funzione per aggiornare il conteggio del carrello nella navigazione
     function updateCartCount() {
         const cart = loadCart();
         cartCountElements.forEach(el => {
-            el.textContent = cart.length; // Conta gli *articoli unici*, non la quantità totale
+            el.textContent = cart.length;
         });
     }
 
-    // Funzione per visualizzare/rendere gli elementi del carrello nella pagina cart.html
     function renderCart() {
         const cart = loadCart();
         if (!cartList || !cartTotalElement) {
-            updateCartCount(); // Se non siamo nella pagina del carrello, aggiorna solo il conteggio
+            updateCartCount();
             return;
         }
 
-        cartList.innerHTML = ''; // Pulisci la lista corrente
+        cartList.innerHTML = '';
         let currentSubtotal = 0;
-        let totalItemsInCart = 0; // Per contare la somma delle quantità di tutti i prodotti
+        let totalItemsInCart = 0;
 
         if (cart.length === 0) {
             cartList.innerHTML = '<p class="empty-cart-message">Il tuo carrello è vuoto.</p>';
@@ -50,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const itemTotalPrice = item.price * item.quantity;
             currentSubtotal += itemTotalPrice;
-            totalItemsInCart += item.quantity; // Aggiunge la quantità di ogni prodotto
+            totalItemsInCart += item.quantity;
 
             itemElement.innerHTML = `
                 <div class="product-info">
@@ -72,17 +67,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         cartTotalElement.textContent = `CHF ${currentSubtotal.toFixed(2)}`;
-        // Correggi l'aggiornamento del conteggio del carrello per mostrare il numero di prodotti unici
         cartCountElements.forEach(el => {
-            el.textContent = cart.length; // Continua a mostrare il numero di tipi di prodotti (articoli unici)
+            el.textContent = cart.length;
         });
-        // Se vuoi mostrare il numero totale di prodotti (somma delle quantità), dovresti usare totalItemsInCart per #cart-count
-        // Ad esempio: cartCountElements.forEach(el => { el.textContent = totalItemsInCart; });
     }
-
-    // =========================================
-    // LOGICA PER LA PAGINA DEL CARRELLO (cart.html)
-    // =========================================
 
     if (cartList) {
         cartList.addEventListener('click', (event) => {
@@ -107,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (target.classList.contains('plus-btn')) {
                 cart[itemIndex].quantity++;
             } else if (target.classList.contains('remove-item-btn')) {
-                ƒcart.splice(itemIndex, 1);
+                cart.splice(itemIndex, 1);
             }
 
             saveCart(cart);
@@ -145,45 +133,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // =========================================
-    // LA TUA LOGICA ESISTENTE PER AGGIUNGERE AL CARRELLO (dalla pagina shop.html)
-    // =========================================
-
-    // Funzione per aggiungere un prodotto al carrello
     window.addProductToCart = (productData) => {
         let cart = loadCart();
         const existingProductIndex = cart.findIndex(item => item.id == productData.id);
 
         if (existingProductIndex > -1) {
-            // Se il prodotto esiste già, incrementa solo la quantità
             cart[existingProductIndex].quantity++;
         } else {
-            // Altrimenti, aggiungi il nuovo prodotto con quantità 1
             cart.push({ ...productData, quantity: 1 });
         }
         saveCart(cart);
-        updateCartCount(); // Aggiorna il conteggio ovunque
+        updateCartCount();
         if (window.location.pathname.includes('cart.html')) {
             renderCart();
         }
     };
 
-
-    // Il tuo listener 'add-to-cart' dai pulsanti dei prodotti
     document.querySelectorAll('.add-to-cart').forEach(button => {
         button.addEventListener('click', (event) => {
             const product = event.target.closest('.product');
             const productId = event.target.getAttribute('data-product');
             const productName = product.querySelector('.productDescription')?.textContent || "Prodotto Sconosciuto";
-            // Prendi il prezzo dall'elemento corretto, assumendo che sia l'ultimo p prima del bottone
-            // o un elemento specifico con una classe per il prezzo
-            const priceElement = product.querySelector('.product p:last-of-type'); // Adjust selector if needed
+            const priceElement = product.querySelector('.product p:last-of-type');
             let productPrice;
             if (priceElement && priceElement.textContent.includes('CHF')) {
                 productPrice = parseFloat(priceElement.textContent.replace('CHF ', '').trim());
             } else {
                 console.warn("Prezzo non trovato o formato non corretto per il prodotto:", productName);
-                productPrice = 0; // Default a 0 o gestisci l'errore
+                productPrice = 0;
             }
 
             const imageSrc = product.querySelector('.carousel img')?.src || product.querySelector('img')?.src || '';
@@ -201,15 +178,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 image: imageSrc
             };
 
-            window.addProductToCart(newItem); // Usa la funzione centralizzata
+            window.addProductToCart(newItem);
             alert(`${newItem.name} aggiunto al carrello!`);
         });
     });
-
-
-    // =========================================
-    // LA TUA LOGICA ESISTENTE PER I CAROSELLI DEI PRODOTTI (sulla pagina shop.html)
-    // =========================================
 
     document.querySelectorAll('.product').forEach(product => {
         const carouselContainer = product.querySelector('.carousel-container');
@@ -222,7 +194,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let currentIndex = 0;
 
         function updateCarousel() {
-            // Assicurati che images[0] esista prima di accedere a offsetWidth
             if (images.length > 0) {
                 const offset = -currentIndex * images[0].offsetWidth;
                 carouselContainer.style.transform = `translateX(${offset}px)`;
@@ -253,10 +224,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Mostra la prima immagine
         showImage(current);
 
-        // Bottoni
         const prev = carousel.querySelector('.prev');
         const next = carousel.querySelector('.next');
         if (prev && next) {
@@ -273,15 +242,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-
-    // Inizializza il carrello (aggiorna il display in base alla pagina in cui si trova)
-    renderCart(); // Chiamata iniziale per mostrare il carrello o il conteggio
-
+    renderCart();
 });
 
-// Gestione click sui prodotti nello shop
 document.addEventListener('DOMContentLoaded', function() {
-    // Solo se siamo nella pagina shop.html
     if (document.querySelector('.product-list')) {
         document.querySelectorAll('.product-link').forEach(link => {
             link.addEventListener('click', function(e) {
@@ -300,13 +264,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Solo se siamo nella pagina product.html
     if (document.getElementById('product-name')) {
-        // 1. Prendi l'id dall'URL
         const params = new URLSearchParams(window.location.search);
         const productId = params.get('id');
 
-        // 2. Definisci i dati dei prodotti
         const products = [
             {
                 id: "tazza-icone",
@@ -359,10 +320,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         ];
 
-        // 3. Trova il prodotto giusto
         const product = products.find(p => p.id === productId);
 
-        // 4. Mostra i dati
         if (product) {
             document.getElementById('product-name').textContent = product.name;
             document.getElementById('product-price').textContent = 'CHF ' + product.price;
@@ -376,7 +335,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Aggiorna tutti i link dei prodotti in shop.html per avere sempre l'id corretto
     document.querySelectorAll('.product').forEach(prod => {
         const id = prod.dataset.productId;
         const link = prod.querySelector('a');

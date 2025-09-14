@@ -1,11 +1,9 @@
 :root {
-  --fox-primary: #444;
-  --fox-primary-dark: #333333;
+  --fox-primary: #444444;
+  --fox-primary-dark: #3f3f3f;
   --fox-bg: #ededed;
   --fox-bg-card: #fff;
   --fox-text: #222;
-  --fox-text-light: #444;
-  --fox-header-bg: #333333;
   --fox-border-radius: 16px;
   --fox-shadow: 0 2px 12px rgba(0,0,0,0.09);
   --fox-gap: 30px;
@@ -14,7 +12,7 @@
 }
 
 .mission-section {
-  background-color: var(--fox-header-bg);
+  background-color: var(--fox-primary-dark);
   text-align: center;
   padding: var(--fox-padding);
 }

@@ -3,8 +3,6 @@
   --fox-primary-dark: #333333;
   --fox-bg: #ededed;
   --fox-text: #222;
-  --fox-text-light: #444;
-  --fox-header-bg: #333;
   --fox-border-radius: 16px;
   --fox-shadow: 0 2px 12px rgba(0,0,0,0.09);
   --fox-gap: 30px;
@@ -15,7 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--fox-header-bg);
+  background: var(--fox-primary-dark);
   border-radius: 0 0 var(--fox-border-radius) var(--fox-border-radius);
   box-shadow: var(--fox-shadow);
   padding: var(--fox-padding);
@@ -60,7 +58,7 @@
 
 .navigator {
   margin-top: 90px;
-  background-color: var(--fox-header-bg);
+  background-color: var(--fox-primary-dark);
   height: fit-content;
 }
 
@@ -89,7 +87,7 @@
 #shop-footer {
   text-align: center;
   padding: 10px;
-  background-color: var(--fox-header-bg);
+  background-color: var(--fox-primary-dark);
   color: var(--fox-bg);
 }
 
@@ -139,7 +137,7 @@
 .shop-section .shop-navigator {
   position: absolute;
   top: 70px;
-  background-color: var(--fox-header-bg);
+  background-color: var(--fox-primary-dark);
 }
 
 .carousel {

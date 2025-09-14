@@ -1,25 +1,23 @@
 @font-face {
   font-family: "Open-Sans";
-  src: url("/assets/Open_Sans,Ubuntu/Open_Sans/static/OpenSans-Regular.ttf")
+  src: url("../assets/Open_Sans,Ubuntu/Open_Sans/static/OpenSans-Regular.ttf")
     format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Ubuntu";
-  src: url("/assets/Open_Sans,Ubuntu/Ubuntu/Ubuntu-Bold.ttf") format("ttf");
+  src: url("../assets/Open_Sans,Ubuntu/Ubuntu/Ubuntu-Bold.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 :root {
-  --fox-primary: #444;
+  --fox-primary: #444444;
   --fox-primary-dark: #333333;
   --fox-bg: #ededed;
   --fox-bg-card: #fff;
   --fox-text: #222;
-  --fox-text-light: ;
-  --fox-header-bg: #333333;
   --fox-border-radius: 16px;
   --fox-shadow: 0 2px 12px rgba(0, 0, 0, 0.09);
   --fox-gap: 30px;
@@ -28,7 +26,7 @@
 }
 
 body {
-  font-family: var(--fox-font);
+  font-family: var(--fox-font), serif;
   margin: 0;
   padding: 0;
   background-color: var(--fox-bg);
@@ -37,7 +35,7 @@ body {
 header {
   text-align: center;
   padding: 40px 0;
-  background-color: var(--fox-header-bg);
+  background-color: var(--fox-primary-dark);
   color: var(--fox-bg-card);
   position: relative;
 }
@@ -45,7 +43,7 @@ header {
 #logo {
   max-width: 260px;
   height: auto;
-  border-top: 3px solid var(--fox-header-bg);
+  border-top: 3px solid var(--fox-primary-dark);
   padding-top: 10px;
   margin-bottom: 10px;
 }
@@ -62,7 +60,7 @@ header img {
 }
 
 .navigator {
-  background-color: var(--fox-header-bg);
+  background-color: var(--fox-primary-dark);
   border-radius: 0 0 var(--fox-border-radius) var(--fox-border-radius);
   box-shadow: var(--fox-shadow);
   padding: 10px 0;
@@ -133,11 +131,31 @@ header img {
   font-size: 14px;
 }
 
-footer {
+.footer {
+  padding: 0 1.5rem;
   text-align: center;
-  padding: 10px;
   background-color: var(--fox-bg);
-  color: var(--fox-header-bg);
+  color: var(--fox-primary-dark);
+}
+
+.footer .footer-flex {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.follow {
+  display: inline;
+}
+
+.footer h4 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer a {
+  margin: 0.2rem;
+  color: var(--fox-primary-dark);
 }
 
 .title {
@@ -152,7 +170,7 @@ footer {
 .title h2 {
   font-family: var(--fox-font);
   font-weight: bold;
-  color: var(--fox-header-bg);
+  color: var(--fox-primary-dark);
   text-align: left;
   margin: 0;
 }
@@ -176,6 +194,7 @@ button:hover {
   width: 230px;
   padding: 15px;
   margin: 0;
+  background-color: var(--fox-bg-card);
   border-radius: var(--fox-border-radius);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -202,10 +221,6 @@ button:hover {
   border-radius: 8px;
 }
 
-.product:hover {
-  transform: translateY(-4px);
-}
-
 #product-list {
   display: flex;
   flex-wrap: wrap;
@@ -216,4 +231,54 @@ button:hover {
   overflow-x: auto;
   white-space: nowrap;
   scroll-behavior: smooth;
+}
+
+@media (max-width: 500px) {
+  #mini-header {
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding: 16px 8px !important;
+    gap: 12px !important;
+    min-height: unset !important;
+    width: 100vw !important;
+    box-sizing: border-box;
+  }
+
+  .logo-area {
+    position: static !important;
+    margin-bottom: 10px !important;
+    justify-content: center !important;
+    width: 23% !important;
+    gap: 8px !important;
+    display: flex !important;
+    flex-direction: row !important;
+  }
+
+  .logo-area #logo-full {
+    display: none
+  }
+
+  #mini-header nav {
+    gap: 18px !important;
+    width: 70% !important;
+    align-items: center !important;
+    margin: 0 !important;
+    margin-right: 10px !important;
+  }
+
+  #mini-header nav a {
+    font-size: 1.05rem !important;
+    padding: 6px 0 !important;
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .title,
+  .title h1,
+  .title h2 {
+    font-size: 1.5rem !important;
+    font-weight: bold;
+  }
+
 }
